@@ -4,11 +4,11 @@ import java.util.ArrayList;
 
 public class CarpetCalculator implements calculatable {
 	double pricePerSquareFoot;
-	double installatonCharge;
+	double installationCharge;
 	public CarpetCalculator(double pricePerSquareFoot, double installatonCharge) {
 		super();
 		this.pricePerSquareFoot = pricePerSquareFoot;
-		this.installatonCharge = installatonCharge;
+		this.installationCharge = installatonCharge;
 	}
 	public CarpetCalculator(double pricePerSquareFoot) {
 		super();
@@ -23,13 +23,28 @@ public class CarpetCalculator implements calculatable {
 	}
 	@Override
 	public String getTotalCost() {
+		//totalSquareFoot=0;
+		//float totalSqFt =0;
+		 //for(Room room : rooms)
+		 // totalSqFt = room;
+	
+		//Room room = null;
+		//return "$" + (costOfCarpet);//* room.getArea();
+		return "$" + installationCharge +  ((Room) rooms).getArea();
+	}
 		
-		return null;
+
+	
+	@Override
+	public String toString() {
+		return "CarpetCalculator [pricePerSquareFoot=" + pricePerSquareFoot + ", installatonCharge=" + installationCharge
+				+ ", rooms=" + rooms + "]";
 	}
 	@Override
 	public void addPercentdDiscount(float percentDiscount) {
 	
-		
+		pricePerSquareFoot = pricePerSquareFoot - ((percentDiscount/100)
+				* pricePerSquareFoot);
 	}
 	
 	

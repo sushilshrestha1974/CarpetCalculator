@@ -16,7 +16,7 @@ public class main {
 
 	        var carpetCalculator3 = new CarpetCalculator(5.00F, 500.00F);
 	        carpetCalculator3.addRoom(new Room(10, 10));
-	        carpetCalculator3.addPercentDiscount(25);
+	        carpetCalculator3.addPercentdDiscount(25);
 	        System.out.println(carpetCalculator3.getTotalCost());
 	    }
 	}
